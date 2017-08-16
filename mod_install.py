@@ -10,14 +10,14 @@ failed_packages = []
 for dependency in file:
     try:
         importlib.import_module(dependency)
-        print(dependency + " file already exist.\n")
+        print(dependency + " module already exist.\n")
     except:
         try:
             pip.main(['install',dependency])
-            print("\n Succesfully installed " + dependency + " file.\n")
+            print("\n Succesfully installed " + dependency + " module.\n")
         except:
             failed_packages.append(dependency)
-print("\n These are the list of failed packages: \n")
+print("\n These are the list of modules with failed installation: \n")
 
 # Printing all the failed packages
 for packages in failed_packages:
