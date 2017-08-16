@@ -4,6 +4,9 @@ import pip
 import importlib
 file = open("module_file.txt").readlines()
 #print(file)
+failed_packages = []
+
+# Trying to see if a particular module exists and If not then downloading and installing the module.
 for dependency in file:
     try:
         importlib.import_module(dependency)
@@ -11,7 +14,12 @@ for dependency in file:
     except:
         try:
             pip.main(['install',dependency])
-            print("Succesfully installed " + dependency + " file.\n")
+            print("\n Succesfully installed " + dependency + " file.\n")
         except:
-            print("Error installing " + dependency + " file.\n")
+            failed_packages.append(dependency)
+print("\n These are the list of failed packages: \n")
+
+# Printing all the failed packages
+for packages in failed_packages:
+    print(packages + "\n")
 			
