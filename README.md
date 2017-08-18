@@ -6,3 +6,6 @@ pip
 importlib
 
 This code is written in Python 3.5.
+
+The Script run like this :-  
+![ScreenShot](https://raw.github.com/pravervats11/AutoInstall_Module/master/Auto_module_screenshot.png)
