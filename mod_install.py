@@ -3,7 +3,7 @@
 import pip
 import importlib
 file = open("module_file.txt").readlines()
-#print(file)
+print(file)
 failed_packages = []
 
 # Trying to see if a particular module exists and if not then downloading and installing the module.
